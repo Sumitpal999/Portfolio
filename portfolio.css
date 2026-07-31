@@ -378,6 +378,80 @@ body {
     box-shadow: 0 0 2rem rgba(135, 206, 235, 0.25);
 }
 
+@media (max-width: 768px) {
+
+    .portfolio-container{
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container{
+        width: 100%;
+        height: auto;
+        padding: 100px 20px 30px;
+    }
+
+    .icons{
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content h1{
+        font-size: 2.2rem;
+    }
+
+    .content h2{
+        font-size: 1.2rem;
+    }
+
+    .content .detail{
+        font-size: 1rem;
+    }
+
+    .btn-container{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .view-project-btn{
+        margin-left: 0;
+    }
+
+    .design{
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .circle-bg{
+        display: none;
+    }
+
+    .circle-photo{
+        width: 280px;
+        height: 280px;
+        position: static;
+        transform: none;
+    }
+
+    .navlist{
+        gap: 15px;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+}
+
 @media (max-width: 700px) {
     .project-grid { grid-template-columns: 1fr; }
 }
