@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+/* ---------- NAV ---------- */
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.85);
+}
+.navlist li {
+    list-style: none;
+}
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    transition: color .2s ease;
+}
+.navlist li a:hover,
+.navlist li a.active {
+    color: skyblue;
+}
+
+/* ---------- HERO / HOME ---------- */
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.left-container, .right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container {
+    background-color: black;
+    width: 70%;
+    padding-left: 3rem;
+}
+.right-container {
+    background: blue;
+    width: 30%;
+    position: relative;
+    justify-content: center;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.icons a {
+    color: white;
+    font-size: 1.7rem;
+    display: inline-block;
+    transition: color .2s ease, transform .2s ease;
+}
+.icons a:hover {
+    color: skyblue;
+    transform: scale(1.15);
+}
+
+.content {
+    margin-left: 4rem;
+}
+.content h2 { font-size: 1.5rem; color: white; }
+.content h1 { font-size: 4rem; color: skyblue; }
+.content .detail {
+    font-size: 1.1rem;
+    color: white;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+}
+
+.btn-container { display: flex; align-items: center; }
+.btn-container a {
+    display: inline-block;
+    text-decoration: none;
+    border: .1rem solid skyblue;
+    font-size: 1.1rem;
+    padding: 1rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    position: relative;
+    z-index: 5;
+}
+.hire-me-btn {
+    background-color: blue;
+    color: white;
+    border: none !important;
+}
+.hire-me-btn:hover {
+    background: transparent;
+    color: skyblue;
+    border: .1rem solid skyblue !important;
+}
+.view-project-btn {
+    background: transparent;
+    color: skyblue;
+    margin-left: 2rem;
+}
+.view-project-btn:hover {
+    background: blue;
+    color: white;
+}
+
+/* ---------- PHOTO CIRCLE ---------- */
+.design {
+    position: absolute;
+    top: 58%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 38rem;
+    height: 38rem;
+    z-index: 1;
+}
+.circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-bg {
+    background: linear-gradient(90deg, transparent 50%, black 50%);
+    width: 38rem;
+    height: 38rem;
+}
+.circle-photo {
+    width: 30rem;
+    height: 30rem;
+    background-image: url("image.png.jpeg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border: .1rem solid white;
+    box-shadow:
+        0 0 1rem white, inset 0 0 1rem white,
+        0 0 2rem skyblue, inset 0 0 2rem skyblue,
+        0 0 4rem skyblue, inset 0 0 4rem skyblue;
+}
+
+/* ---------- OTHER PAGES ---------- */
+.page-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background-color: #0a0a0a;
+    color: white;
+}
+.section-title { font-size: 3rem; color: skyblue; margin-bottom: 1.5rem; }
+.section-text { font-size: 1.1rem; max-width: 42rem; line-height: 1.6; color: #ddd; }
+
+.project-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    max-width: 40rem;
+    box-shadow: 0 0 1.5rem rgba(135, 206, 235, 0.15);
+}
+.project-card h3 { color: white; font-size: 1.6rem; margin-bottom: 1rem; }
+.project-card p { color: #ccc; line-height: 1.6; margin-bottom: 1.5rem; }
+.project-links { display: flex; justify-content: center; gap: 1.5rem; position: relative; z-index: 5; }
+.project-link {
+    text-decoration: none;
+    color: black;
+    background: skyblue;
+    padding: .6rem 1.4rem;
+    border-radius: 2rem;
+    font-size: .95rem;
+    transition: background .2s ease;
+    cursor: pointer;
+}
+.project-link:hover { background: blue; color: white; }
+
+/* ---------- WORK GRID ---------- */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 60rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+.work-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    padding: 1.8rem;
+    box-shadow: 0 0 1.5rem rgba(135, 206, 235, 0.1);
+}
+.work-card h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: .4rem;
+}
+.work-tags {
+    display: inline-block;
+    color: skyblue;
+    font-size: .85rem;
+    margin-bottom: .8rem;
+}
+.work-card ul {
+    padding-left: 1.1rem;
+    color: #ccc;
+}
+.work-card ul li {
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: .4rem;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 50rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.about-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    padding: 1.8rem;
+    box-shadow: 0 0 1.5rem rgba(135, 206, 235, 0.1);
+}
+.about-card h3 {
+    color: skyblue;
+    font-size: 1.2rem;
+    margin-bottom: .8rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.about-card p {
+    color: #ccc;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+.about-sub {
+    color: #888 !important;
+    font-size: .85rem !important;
+    margin-top: .3rem;
+}
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+.skill-tag {
+    background: rgba(135, 206, 235, 0.12);
+    border: 1px solid skyblue;
+    color: skyblue;
+    font-size: .85rem;
+    padding: .35rem .9rem;
+    border-radius: 1.5rem;
+}
+
+/* ---------- SERVICE PAGE ---------- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 60rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.service-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    padding: 2rem 1.6rem;
+    box-shadow: 0 0 1.5rem rgba(135, 206, 235, 0.1);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 2rem rgba(135, 206, 235, 0.25);
+}
+.service-icon {
+    color: skyblue;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.service-card h3 {
+    color: white;
+    font-size: 1.15rem;
+    margin-bottom: .6rem;
+}
+.service-card p {
+    color: #ccc;
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/* ---------- PROJECT GRID ---------- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    max-width: 60rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+.project-card {
+    max-width: none;
+    padding: 1.6rem;
+}
+.project-card h3 {
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+.tech-tags {
+    display: inline-block;
+    color: skyblue;
+    font-size: .8rem;
+    margin-bottom: .7rem;
+}
+.project-points {
+    padding-left: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1.2rem;
+}
+.project-points li {
+    font-size: .88rem;
+    line-height: 1.45;
+    margin-bottom: .35rem;
+}
+.project-links {
+    justify-content: flex-start;
+}
+.project-link {
+    padding: .5rem 1.2rem;
+    font-size: .85rem;
+}
+
+@media (max-width: 700px) {
+    .project-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .service-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .about-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .portfolio-container { flex-direction: column; height: auto; }
+    .left-container, .right-container { width: 100%; height: auto; padding: 8rem 2rem 3rem; }
+    .content { margin-left: 0; }
+    .design { position: static; transform: none; margin: 2rem auto; }
+    .navlist { gap: 1.5rem; font-size: .85rem; flex-wrap: wrap; height: auto; padding: 1rem 0; }
+}
+
+@media (max-width: 700px) {
+    .work-grid { grid-template-columns: 1fr; }
+}
