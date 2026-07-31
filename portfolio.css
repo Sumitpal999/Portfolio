@@ -365,6 +365,19 @@ body {
     font-size: .85rem;
 }
 
+.work-card,
+.about-card,
+.project-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.work-card:hover,
+.about-card:hover,
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 2rem rgba(135, 206, 235, 0.25);
+}
+
 @media (max-width: 700px) {
     .project-grid { grid-template-columns: 1fr; }
 }
