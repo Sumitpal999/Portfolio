@@ -10,6 +10,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="mobile-brand">Sumit<span>.</span></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <ul class="navlist">
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html" class="active">Work</a></li>
@@ -17,6 +19,9 @@
         <li><a href="project.html">Project</a></li>
         <li><a href="service.html">Service</a></li>
     </ul>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars"></i>
+    </label>
 
     <section class="page-container">
         <h2 class="section-title">Work</h2>
@@ -29,6 +34,15 @@
                 <ul>
                     <li>Built a full-stack e-commerce website with separate admin and customer (user) panels.</li>
                     <li>Handled product listings, media management, and order processing with a clean UI.</li>
+                </ul>
+            </div>
+
+            <div class="work-card">
+                <h3>Foodie &mdash; Food Delivery Website</h3>
+                <span class="work-tags">HTML &middot; CSS &middot; JavaScript</span>
+                <ul>
+                    <li>Built a food delivery website UI with a cart system and login flow using client-side JavaScript.</li>
+                    <li>Added a Contact Us form and a Reviews submission form, with cart and login state saved using localStorage.</li>
                 </ul>
             </div>
 
