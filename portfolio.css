@@ -496,7 +496,7 @@ body {
 
     .design {
         position: static;
-        transform: translateX(45px);
+        transform: translateX(15px);
         width: 100%;
         height: auto;
         display: flex;
